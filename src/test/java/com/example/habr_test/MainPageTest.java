@@ -40,10 +40,10 @@ public class MainPageTest {
         WebElement allFlow = driver.findElement(By.xpath("//*[contains(text(), 'Все потоки')]"));
         allFlow.click();
 
-        WebElement Post = driver.findElement(By.xpath("//*[contains(text(), 'Посты')]"));
+        WebElement Post = driver.findElement(By.xpath("//a[contains(text(), 'Посты')]"));
         Post.click();
 
-        assertTrue(driver.findElement(By.xpath("//*[contains(text(), 'Компании')]")).isDisplayed(), "Компании не найдены");
+        assertTrue(driver.findElement(By.xpath("//*[contains(text(), 'Компании')and contains(@class, 'tm-tabs__tab-link')] ")).isDisplayed(), "Компании не найдены");
     }
 }
 
